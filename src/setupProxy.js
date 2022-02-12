@@ -17,7 +17,7 @@ module.exports = function (app) {
     app.use(
         '/posts',
         createProxyMiddleware({
-            target: `http://${backend_quarkus_host}:${backend_quarkus_port}`,
+            target: `https://${backend_quarkus_host}:${backend_quarkus_port}`,
             changeOrigin: true
         })
     );
